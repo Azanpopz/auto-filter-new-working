@@ -128,7 +128,7 @@ async def auto_filter(bot, update):
             results.append([
                 InlineKeyboardButton("📂 " + file_names, url=file_link),
                 InlineKeyboardButton(f_size, url=file_link)
-        ])
+        ]) 
         
     else:
         return # return if no files found for that query
