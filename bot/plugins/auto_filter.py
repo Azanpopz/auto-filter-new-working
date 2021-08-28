@@ -66,15 +66,7 @@ async def auto_filter(bot, update):
                 ]
             )
         for filter in filters: # iterating through each files
-            file_name = filter.get("file_name")
-            file_type = filter.get("file_type")
-            file_link = filter.get("file_link")
-            file_size = int(filter.get("file_size", "0"))
-            
-            # from B to MiB
-            
-            for filter in filters: # iterating through each files
-            file_name = filter.get("file_name")
+            file_name = filter.get("❤file_name")
             file_type = filter.get("file_type")
             file_link = filter.get("file_link")
             file_size = int(filter.get("file_size", ""))
@@ -84,11 +76,15 @@ async def auto_filter(bot, update):
             file_MB = ""
             file_GB = ""
             
-            
-            file_size = "" if file_size == ("[0 B]") else file_size
-            
-            # add emoji down below inside " " if you want..
-            button_text = f" 🎬{file_size} 🗂️{file_name}"
+            if file_size < 1024:
+                file_KB = f"𝚂𝚞𝚋𝚝𝚒𝚝𝚕𝚎"
+                size = file_KB
+            elif file_size < (1024*1024):
+                file_MB = f"📂 {str(round((file_size/1024),2))} 𝙼ʙ"
+                size = file_MB
+            else:
+                file_GB = f"📂 {str(round((file_size/(1024*1024)),2))} 𝙶ʙ"
+                size = file_GB
            
                 
             file_names = file_name
