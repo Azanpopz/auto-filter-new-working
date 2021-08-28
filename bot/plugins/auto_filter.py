@@ -85,11 +85,7 @@ async def auto_filter(bot, update):
             else:
                 file_GB = f"📂 {str(round((file_size/(1024*1024)),2))} 𝙶ʙ"
                 size = file_GB
-
-            file_size = "" if file_size == ("[0 B]") else file_size
-            
-            # add emoji down below inside " " if you want..
-            button_text = f" 🎬{file_size} 🗂️{file_name}"
+           
                 
             file_names = file_name
             file_size = size
