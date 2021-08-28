@@ -65,16 +65,7 @@ async def auto_filter(bot, update):
                     InlineKeyboardButton("🔘 JOIN OUR MAIN CHANNEL 🔘", url="https://t.me/mazhatthullikal")
                 ]
             )
-        for filter in filters: # iterating through each files
-            file_name = filter.get("file_name")
-            file_type = filter.get("file_type")
-            file_link = filter.get("file_link")
-            file_size = int(filter.get("file_size", ""))
-            file_size = round((file_size/1024),2) # from B to KB
-            size = ""
-            file_KB = ""
-            file_MB = ""
-            file_GB = ""
+        
             
             if file_size < 1024:
                 file_size = f"[{file_size} B]"
