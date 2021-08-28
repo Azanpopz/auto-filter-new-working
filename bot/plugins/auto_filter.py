@@ -66,7 +66,7 @@ async def auto_filter(bot, update):
                 ]
             )
         for filter in filters: # iterating through each files
-            file_name = filter.get("f"🎬file_name")
+            file_name = filter.get(f"📂 {str(round((file_name")}
             file_type = filter.get("file_type")
             file_link = filter.get("file_link")
             file_size = int(filter.get("file_size", ""))
