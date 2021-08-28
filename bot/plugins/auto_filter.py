@@ -62,11 +62,11 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton("🔘 JOIN OUR MAIN CHANNEL 🔘", url="https://t.me/mazhatthullikal")
+                    InlineKeyboardButton("█▓▒­░⡷⠂ＪＯＩＮ ⠐⢾░▒▓█", url="https://t.me/mazhatthullikal")
                 ]
             )
         for filter in filters: # iterating through each files
-            file_name = filter.get(f"🎬file_name")
+            file_name = filter.get("file_name")
             file_type = filter.get("file_type")
             file_link = filter.get("file_link")
             file_size = int(filter.get("file_size", ""))
@@ -85,8 +85,7 @@ async def auto_filter(bot, update):
             else:
                 file_GB = f"📂 {str(round((file_size/(1024*1024)),2))} 𝙶ʙ"
                 size = file_GB
-
-            button_text = f" 🎬{file_size} 🗂️{file_name}"
+           
                 
             file_names = file_name
             file_size = size
