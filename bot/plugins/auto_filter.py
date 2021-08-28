@@ -65,7 +65,13 @@ async def auto_filter(bot, update):
                     InlineKeyboardButton("🔘 JOIN OUR MAIN CHANNEL 🔘", url="https://t.me/mazhatthullikal")
                 ]
             )
-        
+        for filter in filters: # iterating through each files
+            file_name = filter.get("file_name")
+            file_type = filter.get("file_type")
+            file_link = filter.get("file_link")
+            file_size = int(filter.get("file_size", "0"))
+            
+            # from B to MiB
             
             if file_size < 1024:
                 file_size = f"[{file_size} B]"
@@ -81,6 +87,11 @@ async def auto_filter(bot, update):
             
             # add emoji down below inside " " if you want..
             button_text = f" 🎬{file_size} 🗂️{file_name}"
+           
+                
+            file_names = file_name
+            file_size = size
+            print(file_name)
 
             if file_type == "video":
                 if allow_video: 
