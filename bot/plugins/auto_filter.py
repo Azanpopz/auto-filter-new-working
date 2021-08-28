@@ -87,9 +87,7 @@ async def auto_filter(bot, update):
                 size = file_GB
            
                 
-            file_names = file_name
-            file_size = size
-            print(file_name)
+            button_text = f" 🎬{file_size} 🗂️{file_name}"
 
             if file_type == "video":
                 if allow_video: 
